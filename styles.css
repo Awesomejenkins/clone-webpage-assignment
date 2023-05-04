@@ -1,3 +1,4 @@
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -13,19 +14,194 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Merriweather' , sans-serif;
 
+}
+
+body{
+    font-family: 'Roboto' , sans-serif;
+    border: darkred solid 1px;
+
+
+
+}
+h2{
+    font-size: 18px;
+}
 /* ------------------------------- 3. Layout --------------------------------------- */
 
+
 /* --------------- 3.1 Reusables ----------------------- */
+
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+.header {
+    background-image: linear-gradient(to bottom right, #4845E4, #5722CD) ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: aliceblue;
 
+
+}
+.outer-container-header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0 0 50px 0;
+    flex-basis: 1200px;
+    flex-wrap: wrap;
+}
+.navigation-bar{
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 1200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.nav-list{
+    flex-basis: 500px;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+
+}
+
+.inner-container-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 60px;
+    padding-bottom: 100px;
+
+}
+
+.intro-items{
+    flex-basis: 50px;
+}
+
+
+#button-nav{
+    border: 20px solid #ED4385;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background-color: #ED4385;
+    box-shadow: 0 4px 8px 0;
+
+
+}
+
+
+#squiggle-Line{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50px);
+}
 /* --------------- 4.2 Introduction ------------------- */
+.outer-container-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 1400px;
+
+}
+.inner-container-mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 25px;
+    color: #5722CD;
+
+
+}
+.mission-items{
+    flex-basis: 50px;
+}
+/* --------------- 4.3 work ------------------- */
+.outer-container-projects{
+    display: flex;
+    background-color: #F3F6F9;
+    flex-basis: 1400px;
+    flex-direction: column;
+}
+.work-images{
+    height: 450px;
+    width: 650px;
+}
+
+.projects{
+    display: flex;
+}
+
+.inner-container-projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 600px;
+
+}
+#squiggle-Line-projects{
+    width: 25px;
+}
+
+.text-projects{
+    flex-basis: 300px;
+}
+
+
+
+/* --------------- 4.4 services ------------------- */
+.outer-container-services{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.inner-container-services{
+    border: solid #5722CD 1px;
+}
+.icons{
+    width: 75px;
+    height: 75px;
+}
+/* --------------- 4.5 form ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media all and (max-width: 800px) {
+    .nav-list {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        justify-content: space-around;
+    }
+}
+@media all and (max-width: 500px) {
+    .nav-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
